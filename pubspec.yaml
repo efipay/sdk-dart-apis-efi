@@ -1,0 +1,19 @@
+name: efipay
+description: A dart library for integration with payment services provided by Efi.
+version: 1.0.0
+homepage: https://github.com/efipay/sdk-dart-apis-efi
+
+environment:
+  sdk: ">=2.12.0 <3.0.0"
+  flutter: ">=1.20.0"
+
+dependencies:
+  encrypt: ^5.0.0
+  pointycastle: ^3.2.0
+  flutter:
+    sdk: flutter
+
+dev_dependencies:
+  test: ^1.17.1
+
+flutter:
