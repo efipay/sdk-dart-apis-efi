@@ -175,8 +175,7 @@ const Map<String, Map<String, dynamic>> CONSTANTS = {
       'ofStartPixPayment': {'route': '/pagamentos/pix', 'method': 'post'},
       'ofListPixPayment': {'route': '/pagamentos/pix', 'method': 'get'},
       'ofDevolutionPix': {
-        'route':
-            '/open-finance/pagamentos/pix/:identificadorPagamento/devolver',
+        'route': '/pagamentos/pix/:identificadorPagamento/devolver',
         'method': 'post'
       },
     }
