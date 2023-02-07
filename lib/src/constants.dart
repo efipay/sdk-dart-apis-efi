@@ -159,7 +159,37 @@ const Map<String, Map<String, dynamic>> CONSTANTS = {
         'route': '/v2/gn/relatorios/extrato-conciliacao',
         'method': 'post'
       },
-      'detailReport': {'route': '/v2/gn/relatorios/:id', 'method': 'get'}
+      'detailReport': {'route': '/v2/gn/relatorios/:id', 'method': 'get'},
+      'pixSplitConfig': {'route': '/v2/gn/split/config', 'method': 'post'},
+      'pixSplitConfigId': {'route': '/v2/gn/split/config/:id', 'method': 'put'},
+      'pixSplitDetailConfig': {
+        'route': '/v2/gn/split/config/:id',
+        'method': 'get'
+      },
+      'pixSplitUnlinkDueCharge': {
+        'route': '/v2/gn/split/cobv/:txid/vinculo',
+        'method': 'delete'
+      },
+      'pixSplitLinkDueCharge': {
+        'route': '/v2/gn/split/cobv/:txid/vinculo/:splitConfigId',
+        'method': 'put'
+      },
+      'pixSplitDetailDueCharge': {
+        'route': '/v2/gn/split/cobv/:txid',
+        'method': 'get'
+      },
+      'pixSplitUnlinkCharge': {
+        'route': '/v2/gn/split/cob/:txid/vinculo',
+        'method': 'delete'
+      },
+      'pixSplitLinkCharge': {
+        'route': '/v2/gn/split/cob/:txid/vinculo/:splitConfigId',
+        'method': 'put'
+      },
+      'pixSplitDetailCharge': {
+        'route': '/v2/gn/split/cob/:txid',
+        'method': 'get'
+      },
     }
   },
   'OPEN-FINANCE': {
