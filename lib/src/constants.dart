@@ -3,8 +3,8 @@
 const Map<String, Map<String, dynamic>> CONSTANTS = {
   'DEFAULT': {
     'URL': {
-      'production': 'https://api.gerencianet.com.br/v1',
-      'sandbox': 'https://sandbox.gerencianet.com.br/v1'
+      'production': 'https://cobrancas.api.efipay.com.br/v1',
+      'sandbox': 'https://cobrancas-h.api.efipay.com.br/v1'
     },
     'ENDPOINTS': {
       'authorize': {'route': '/authorize', 'method': 'post'},
@@ -110,8 +110,8 @@ const Map<String, Map<String, dynamic>> CONSTANTS = {
   },
   'PIX': {
     'URL': {
-      'production': 'https://api-pix.gerencianet.com.br',
-      'sandbox': 'https://api-pix-h.gerencianet.com.br'
+      'production': 'https://pix.api.efipay.com.br',
+      'sandbox': 'https://pix-h.api.efipay.com.br'
     },
     'ENDPOINTS': {
       'authorize': {'route': '/oauth/token', 'method': 'post'},
@@ -194,8 +194,8 @@ const Map<String, Map<String, dynamic>> CONSTANTS = {
   },
   'OPEN-FINANCE': {
     'URL': {
-      'production': 'https://apis.gerencianet.com.br/open-finance',
-      'sandbox': 'https://apis-h.gerencianet.com.br/open-finance'
+      'production': 'https://openfinance.api.efipay.com.br',
+      'sandbox': 'https://openfinance-h.api.efipay.com.br'
     },
     'ENDPOINTS': {
       'authorize': {'route': '/oauth/token', 'method': 'post'},
@@ -212,8 +212,8 @@ const Map<String, Map<String, dynamic>> CONSTANTS = {
   },
   'PAGAMENTOS': {
     'URL': {
-      'production': 'https://apis.gerencianet.com.br/pagamento',
-      'sandbox': 'https://apis.gerencianet.com.br/pagamento'
+      'production': 'https://pagarcontas.api.efipay.com.br',
+      'sandbox': 'https://pagarcontas.api.efipay.com.br'
     },
     'ENDPOINTS': {
       'authorize': {'route': '/oauth/token', 'method': 'post'},
@@ -224,7 +224,10 @@ const Map<String, Map<String, dynamic>> CONSTANTS = {
     }
   },
   'OPENING-ACCOUNTS': {
-    'URL': {'production': 'https://apis.gerencianet.com.br', 'sandbox': null},
+    'URL': {
+      'production': 'https://abrircontas.api.efipay.com.br',
+      'sandbox': 'https://abrircontas.api.efipay.com.br'
+    },
     'ENDPOINTS': {
       'authorize': {'route': '/oauth/token', 'method': 'post'},
       'createAccount': {
