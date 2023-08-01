@@ -40,9 +40,11 @@ class Request {
 
     String bodyEncode = json.encode(requestOptions['body']);
 
-    request.contentLength = bodyEncode.length;
+    List<int> bodyutf = utf8.encode(bodyEncode);
 
-    request.write(bodyEncode);
+    request.contentLength = bodyutf.length;
+
+    request.add(bodyutf);
 
     HttpClientResponse response = await request.close();
 
