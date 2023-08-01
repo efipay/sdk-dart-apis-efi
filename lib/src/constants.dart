@@ -194,14 +194,14 @@ const Map<String, Map<String, dynamic>> CONSTANTS = {
   },
   'OPEN-FINANCE': {
     'URL': {
-      'production': 'https://openfinance.api.efipay.com.br',
-      'sandbox': 'https://openfinance-h.api.efipay.com.br'
+      'production': 'https://openfinance.api.efipay.com.br/v1',
+      'sandbox': 'https://openfinance-h.api.efipay.com.br/v1'
     },
     'ENDPOINTS': {
       'authorize': {'route': '/oauth/token', 'method': 'post'},
       'ofConfigUpdate': {'route': '/config', 'method': 'put'},
       'ofConfigDetail': {'route': '/config', 'method': 'get'},
-      'ofListParticipants': {'route': '/participantes/', 'method': 'get'},
+      'ofListParticipants': {'route': '/participantes', 'method': 'get'},
       'ofStartPixPayment': {'route': '/pagamentos/pix', 'method': 'post'},
       'ofListPixPayment': {'route': '/pagamentos/pix', 'method': 'get'},
       'ofDevolutionPix': {
@@ -212,8 +212,8 @@ const Map<String, Map<String, dynamic>> CONSTANTS = {
   },
   'PAGAMENTOS': {
     'URL': {
-      'production': 'https://pagarcontas.api.efipay.com.br',
-      'sandbox': 'https://pagarcontas.api.efipay.com.br'
+      'production': 'https://pagarcontas.api.efipay.com.br/v1',
+      'sandbox': 'https://pagarcontas.api.efipay.com.br/v1'
     },
     'ENDPOINTS': {
       'authorize': {'route': '/oauth/token', 'method': 'post'},
@@ -225,8 +225,8 @@ const Map<String, Map<String, dynamic>> CONSTANTS = {
   },
   'OPENING-ACCOUNTS': {
     'URL': {
-      'production': 'https://abrircontas.api.efipay.com.br',
-      'sandbox': 'https://abrircontas.api.efipay.com.br'
+      'production': 'https://abrircontas.api.efipay.com.br/v1',
+      'sandbox': 'https://abrircontas.api.efipay.com.br/v1'
     },
     'ENDPOINTS': {
       'authorize': {'route': '/oauth/token', 'method': 'post'},
