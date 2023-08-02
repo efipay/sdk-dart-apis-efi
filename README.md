@@ -29,6 +29,7 @@ Para usar este plugin, adicione gerencianet como [uma dependência em seu arquiv
 
 ## Começando
 
+
 Em seguida, inicialize o plugin de preferência no initState do seu widget.
 
 ```
@@ -40,7 +41,7 @@ class _PaymentPageState extends State<PaymentPage> {
     'client_id': 'YOUR_CLIENT_ID',
     'client_secret': 'YOU_CLIENT_SECRET',
     'sandbox': false,
-    'certificate': '',
+    'certificate': 'PATH_CERTIFICATE_IN_PROJECT',
     'account_id': 'YOU_ACCOUNT_ID'
   };
   EfiPay efipay;
