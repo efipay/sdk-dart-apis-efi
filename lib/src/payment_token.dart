@@ -18,8 +18,8 @@ class PaymentToken {
 
   static Future<dynamic> saveCard(dynamic body, dynamic config) async {
     String url = config["sandbox"]
-        ? config["baseUri"] + "/v1/card"
-        : "https://tokenizer.gerencianet.com.br/card";
+        ? 'https://sandbox.gerencianet.com.br/v1/card'
+        : 'https://tokenizer.gerencianet.com.br/card';
     HttpClient client = new HttpClient();
     HttpClientRequest request = await client.openUrl("post", Uri.parse(url));
     request.headers.add('account-code', config['accountId']);
@@ -43,7 +43,11 @@ class PaymentToken {
   }
 
   static Future<dynamic> getKey(dynamic config) async {
-    String url = config["baseUri"] + '/pubkey?code=' + config["accountId"];
+    String url = config["sandbox"]
+        ? 'https://sandbox.gerencianet.com.br/v1/pubkey?code=' +
+            config["accountId"]
+        : 'https://api.gerencianet.com.br/v1/pubkey?code=' +
+            config["accountId"];
     HttpClient client = new HttpClient();
     HttpClientRequest request = await client.openUrl("get", Uri.parse(url));
     HttpClientResponse response = await request.close();
