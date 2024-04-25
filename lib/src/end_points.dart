@@ -30,9 +30,8 @@ class EndPoints {
       return PaymentToken.generate(body, this._config.conf);
 
     if (isMobileDevice()) {
-      print(
-          "AVISO: A integração com os endpoints de nossas APIs deve ser realizada no backend do seu projeto.");
-      return;
+      throw Exception(
+          "AVISO: A integração com as nossas APIs deve ser realizada no backend do seu projeto.");
     }
 
     String route = _getRoute(endpoint, params);
