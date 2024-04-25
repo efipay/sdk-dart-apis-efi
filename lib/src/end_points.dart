@@ -1,6 +1,7 @@
 import 'payment_token.dart';
 import 'api_request.dart';
 import 'config.dart';
+import 'dart:io';
 
 /// This is the mains class of Efi SDK. It's responsible to instance an ApiRequest,
 /// send the right data to a given endpoint, and return a response to SDK client.
@@ -28,6 +29,12 @@ class EndPoints {
     if (endpointName == 'paymentToken')
       return PaymentToken.generate(body, this._config.conf);
 
+    if (isMobileDevice()) {
+      print(
+          "AVISO: A integração com os endpoints de nossas APIs deve ser realizada no backend do seu projeto.");
+      return;
+    }
+
     String route = _getRoute(endpoint, params);
 
     if (params != null) {
@@ -41,6 +48,10 @@ class EndPoints {
     return await this
         ._requester
         ?.send(endpoint['method'], route, requestOptions);
+  }
+
+  bool isMobileDevice() {
+    return Platform.isAndroid || Platform.isIOS;
   }
 
   String _getRoute(endpoint, params) {
