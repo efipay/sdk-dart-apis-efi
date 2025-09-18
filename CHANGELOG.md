@@ -1,3 +1,7 @@
+# 1.1.0
+
+- add pix automatico
+
 # 1.0.2
 
 - add pix split
