@@ -1,4 +1,4 @@
-/// This constant stores all the EfiPay API Endpoints and other information
+/// This constant stores all the EfiPay API Endpoints and other information.
 
 const Map<String, Map<String, dynamic>> CONSTANTS = {
   'DEFAULT': {
