@@ -9,7 +9,7 @@ void main() async {
 }
 
 dynamic refundCard(EfiPay efi, int charge_id) async {
-  Map<String, dynamic> params = {'id': 44815870};
+  Map<String, dynamic> params = {'id': charge_id};
 
   dynamic body = {'amount': 1};
 
