@@ -5,7 +5,7 @@ import 'constants.dart';
 /// Efi API, and credential data of Efi client.
 
 class Config {
-  static final String version = '1.0.0';
+  static final String version = '1.1.0';
   Map conf = {};
 
   static final Config _singleton = Config._internal();
